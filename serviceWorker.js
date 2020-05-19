@@ -32,9 +32,7 @@ self.addEventListener("install", (event) => {
     caches.open("v1").then((cache) => {
       const items = [
         `${path}/`,
-        `${path}/index.html`,
         `${path}/styles.css`,
-        `${path}/app.js`,
         `${path}/images/sunflower.jpg`,
         `${path}/images/icyWaterfall.jpg`,
         `${path}/images/cherryBlossom.jpg`,
