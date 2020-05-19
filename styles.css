@@ -18,6 +18,14 @@ header {
   color: white;
 }
 
+.online {
+  color: #b9e981;
+}
+
+.offline {
+  color: #ff416f;
+}
+
 main {
   display: flex;
   gap: 16px;

@@ -58,8 +58,23 @@ function renderImages() {
   });
 }
 
+function updateOnlineStatus() {
+  const heading = document.querySelector(".online-status");
+  const isOnline = navigator.onLine;
+  heading.innerText = isOnline ? "Online" : "Offline";
+  heading.classList.toggle("online", isOnline);
+  heading.classList.toggle("offline", !isOnline);
+}
+
+function addOnLineEventListeners() {
+  window.addEventListener("offline", updateOnlineStatus);
+  window.addEventListener("online", updateOnlineStatus);
+}
+
 function runApp() {
   renderImages();
+  updateOnlineStatus();
+  addOnLineEventListeners();
 }
 
 if ("serviceWorker" in navigator) {
