@@ -1,0 +1,17 @@
+{
+  "name": "offline-post",
+  "version": "1.0.0",
+  "main": "index.html",
+  "repository": "https://github.com/andyjakubowski/offline-post.git",
+  "author": "Andy Jakubowski <hello@andyjakubowski.com>",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "browser-sync": "^2.26.7",
+    "gh-pages": "^2.2.0"
+  },
+  "scripts": {
+    "start": "browser-sync start --server './../' --files '.' --startPath 'offline-post/index.html'",
+    "deploy": "gh-pages -d '.'"
+  }
+}
